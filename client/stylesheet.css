@@ -1,3 +1,4 @@
+/*
 h1 {
 	font-family: 'Open Sans', sans-serif;
 	text-align: center;
@@ -27,15 +28,15 @@ p {
 }
 
 .header {
-	padding-top: 15px; 
-	text-align: center; 
-	
+	padding-top: 15px;
+	text-align: center;
+
 }
 
-/*.header img.center {
+/!*.header img.center {
 	display: inline;
 	text-align: "center"
-}*/
+}*!/
 
 .nav {
 	color: #ffffff;
@@ -91,21 +92,21 @@ p {
 	margin-bottom: 8px;
 }
 
-.section .container h4 {
+.section .mainContainer h4 {
 	margin-top: 2px;
 	margin-bottom: 0;
 	padding: 0;
 
 }
 
-.section .container h3 {
+.section .mainContainer h3 {
 	margin: 0;
 	padding: 0;
 
 }
 
-.section .container p {
+.section .mainContainer p {
 	margin-top: 4px;
 	padding: 0;
 
-}
+}*/

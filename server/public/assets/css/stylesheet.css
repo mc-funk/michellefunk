@@ -1,0 +1,112 @@
+/*
+h1 {
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	color: #6aa9d4;
+}
+
+h2 {
+	font-family: 'Open Sans', sans-serif;
+	color: #fda703;
+}
+
+h3 {
+	padding-bottom: 0;
+	font-family: 'Open Sans', sans-serif;
+	color: #8aa9d4;
+}
+
+h4 {
+	padding-top: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-style: italic;
+}
+
+p {
+	font-family: 'Open Sans', sans-serif;
+	color: #2f2f2f;
+}
+
+.header {
+	padding-top: 15px;
+	text-align: center;
+
+}
+
+/!*.header img.center {
+	display: inline;
+	text-align: "center"
+}*!/
+
+.nav {
+	color: #ffffff;
+	background-color: #6aa9d4;
+	font-family: 'Open Sans', sans-serif;
+	padding: 6px;
+	text-align: center;
+
+}
+
+.nav a {
+	color: #ffffff;
+}
+
+.nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav li {
+	display: inline;
+	width: 120px;
+}
+
+.skillslist {
+	font-family: 'Open Sans', sans-serif;
+	border-width: 10px;
+	border-style: solid;
+	border-color: #6aa9d4;
+	padding-left: 15px;
+	padding-right:15px;
+	padding-bottom: 20px;
+}
+
+.skillslist ul {
+	text-align: center;
+	padding: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.skillslist li {
+	display: inline;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.skillslist h2 {
+	text-align: center;
+	margin-bottom: 8px;
+}
+
+.section .mainContainer h4 {
+	margin-top: 2px;
+	margin-bottom: 0;
+	padding: 0;
+
+}
+
+.section .mainContainer h3 {
+	margin: 0;
+	padding: 0;
+
+}
+
+.section .mainContainer p {
+	margin-top: 4px;
+	padding: 0;
+
+}*/
