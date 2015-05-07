@@ -13,8 +13,10 @@ module.exports = function(grunt) {
             },
             //Define source and destination for uglified code
             build: {
-                src:'client/app.js',
-                dest: 'server/public/assets/scripts/app.min.js'
+                files : {
+                    'server/public/assets/scripts/app.min.js' : 'client/app.js',
+                    'server/public/assets/scripts/document.min.js' : 'client/document.js'
+                }
             }
         },
         //Configure options for copy, which will copy needed node modules into
