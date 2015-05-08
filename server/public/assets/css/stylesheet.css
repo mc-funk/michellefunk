@@ -1,3 +1,7 @@
+a {
+	color: #fda703;
+}
+
 h1 {
 	font-family: 'Open Sans', sans-serif;
 	text-align: center;
@@ -32,18 +36,16 @@ p {
 
 }
 
-/*.header img.center {
-	display: inline;
-	text-align: "center"
-}*/
+.header img {
+	margin-left: 15px;
+}
 
-.nav {
+.sidebar {
 	color: #ffffff;
 	background-color: #6aa9d4;
 	font-family: 'Open Sans', sans-serif;
 	padding: 6px;
 	text-align: center;
-
 }
 
 .nav a {
