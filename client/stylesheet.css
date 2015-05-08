@@ -111,6 +111,10 @@ p {
 
 }
 
+.profiles {
+	margin-top: 15px;
+}
+
 /*.textArea {
 	position: relative;
 }
