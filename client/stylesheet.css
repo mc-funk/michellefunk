@@ -1,50 +1,65 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+}
+
 a {
 	color: #fda703;
 }
 
 h1 {
-	font-family: 'Open Sans', sans-serif;
+
 	text-align: center;
 	color: #6aa9d4;
 }
 
 h2 {
-	font-family: 'Open Sans', sans-serif;
 	color: #fda703;
 }
 
 h3 {
 	padding-bottom: 0;
-	font-family: 'Open Sans', sans-serif;
 	color: #8aa9d4;
 }
 
 h4 {
 	padding-top: 0;
-	font-family: 'Open Sans', sans-serif;
 	font-style: italic;
 }
 
 p {
-	font-family: 'Open Sans', sans-serif;
 	color: #2f2f2f;
 }
 
-.header {
-	padding-top: 15px;
-	text-align: center;
+.row {
+	margin-bottom: 15px;
 }
 
-.header img {
-	margin-left: 15px;
+.header {
+	text-align: center;
+	margin-top: 15px;
 }
 
 .sidebar {
 	color: #ffffff;
 	background-color: #6aa9d4;
-	font-family: 'Open Sans', sans-serif;
 	padding: 6px;
-	text-align: center;
+}
+
+.socialBtn {
+	display: inline-block;
+	margin-left: 13px;
+	margin-top: 15px;
+}
+
+.socialBtn img {
+	margin: 0
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+.socialBtn img:hover {
+	opacity: 0.5;
 }
 
 .nav a {
@@ -75,8 +90,6 @@ p {
 .skillslist ul {
 	text-align: center;
 	padding: 0;
-	padding-top: 0;
-	padding-bottom: 0;
 	margin-top: 0;
 	margin-bottom: 0;
 }
@@ -111,8 +124,17 @@ p {
 
 }
 
-.profiles {
+.footer {
 	margin-top: 15px;
+	padding-top: 30px;
+	padding-bottom: 15px;
+	text-align: center;
+	background-color: #fda703;
+}
+
+.footer p {
+	color: #ffffff;
+	padding-top: 10px;
 }
 
 /*.textArea {
