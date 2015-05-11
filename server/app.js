@@ -3,7 +3,15 @@ var app = express();
 
 var path = require("path");
 
+var hash = require("./gravatar");
+
 app.set('port', (process.env.PORT || 5000)); //Heroku sets env PORT to 5000
+
+app.get('/grav', function(request, response) {
+    console.log(request);
+    var url = hash(request.query.name);
+    response.send(url);
+});
 
 app.get('/*', function(request, response) {
     var file = request.params[0] || 'views/index.html';
@@ -14,3 +22,4 @@ app.get('/*', function(request, response) {
 app.listen(app.get('port'), function() {
     console.log("App is running on port: ", app.get('port'));
 });
+

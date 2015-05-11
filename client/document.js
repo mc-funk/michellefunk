@@ -1,13 +1,15 @@
 $(document).ready(function() {
+    $.get("/grav", {name:'michelle@michellefunk.com'}, function(url) {
+        console.log(url);
+    });
+
     $.get("/assets/scripts/profile.html", function(data) {
-        console.log(data);
         $(".textArea").html(data);
         setHeight();
     });
 
     $("#profile").on("click", function() {
         $.get("/assets/scripts/profile.html", function(data){
-            console.log(data);
             $(".textArea").html(data);
             setHeight();
         });
@@ -15,7 +17,6 @@ $(document).ready(function() {
 
     $("#employment").on("click", function() {
         $.get("/assets/scripts/employment.html", function(data){
-            console.log(data);
             $(".textArea").html(data);
             setHeight();
         });
@@ -23,7 +24,6 @@ $(document).ready(function() {
 
     $("#education").on("click", function() {
         $.get("/assets/scripts/education.html", function(data){
-            console.log(data);
             $(".textArea").html(data);
             setHeight();
         });
