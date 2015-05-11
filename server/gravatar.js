@@ -7,7 +7,7 @@ function hash(input) {
     input = input.toLowerCase();
     console.log("http://www.gravatar.com/" + CryptoJS(input) + ".json?callback=displayGravatar");
     return "http://www.gravatar.com/" + CryptoJS(input) + ".json?callback=displayGravatar";
-}
+};
 
 module.exports = hash;
 //1

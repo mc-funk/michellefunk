@@ -8,7 +8,6 @@ var hash = require("./gravatar");
 app.set('port', (process.env.PORT || 5000)); //Heroku sets env PORT to 5000
 
 app.get('/grav', function(request, response) {
-    console.log(request);
     var url = hash(request.query.name);
     response.send(url);
 });

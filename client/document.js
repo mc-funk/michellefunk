@@ -1,6 +1,21 @@
 $(document).ready(function() {
-    $.get("/grav", {name:'michelle@michellefunk.com'}, function(url) {
-        console.log(url);
+    $.get("/grav", {name:'michelle@michellefunk.com'}, function(gravatarUrl) {
+        $.ajax({
+            type: 'GET',
+            dataType: 'jsonp',
+            crossDomain: true,
+            jsonp: 'json_callback',
+            url: gravatarUrl,
+            complete: function() {
+                console.log("Ajax call complete")
+            },
+            success: function(data) {
+                console.log(data.results)
+            },
+            error: function(xhr, status) {
+                console.log("Error : ", xhr, " ", status);
+            }
+        });
     });
 
     $.get("/assets/scripts/profile.html", function(data) {
@@ -28,9 +43,14 @@ $(document).ready(function() {
             setHeight();
         });
     });
+
+    function displayGravatar() {
+        console.log("Will run function")
+    }
 });
 
 function setHeight(){
     var eHeight = $(".textArea").innerHeight();
     $(".sidebar").outerHeight(eHeight);
 }
+
