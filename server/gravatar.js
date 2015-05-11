@@ -5,8 +5,8 @@ function hash(input) {
     input = input.toString();
     input = input.trim();
     input = input.toLowerCase();
-    console.log("http://www.gravatar.com/" + CryptoJS(input) + ".json?callback=displayGravatar");
-    return "http://www.gravatar.com/" + CryptoJS(input) + ".json?callback=displayGravatar";
+    console.log("https://www.gravatar.com/" + CryptoJS(input) + ".json?callback=displayGravatar");
+    return "https://www.gravatar.com/" + CryptoJS(input) + ".json?callback=displayGravatar";
 };
 
 module.exports = hash;

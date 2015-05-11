@@ -2,7 +2,7 @@ $(document).ready(function() {
     $.get("/grav", {name:'michelle@michellefunk.com'}, function(gravatarUrl) {
         $.ajax({
             type: 'GET',
-            dataType: 'jsonp',
+            dataType: 'json',
             crossDomain: true,
             jsonp: 'json_callback',
             url: gravatarUrl,
@@ -10,7 +10,7 @@ $(document).ready(function() {
                 console.log("Ajax call complete")
             },
             success: function(data) {
-                console.log(data.results)
+                console.log(data)
             },
             error: function(xhr, status) {
                 console.log("Error : ", xhr, " ", status);
@@ -44,9 +44,7 @@ $(document).ready(function() {
         });
     });
 
-    function displayGravatar() {
-        console.log("Will run function")
-    }
+
 });
 
 function setHeight(){
@@ -54,3 +52,6 @@ function setHeight(){
     $(".sidebar").outerHeight(eHeight);
 }
 
+function displayGravatar() {
+    console.log("Will run function")
+}
