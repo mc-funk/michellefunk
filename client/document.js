@@ -1,20 +1,36 @@
 $(document).ready(function() {
     $.get("/grav", {name:'michelle@michellefunk.com'}, function(gravatarUrl) {
         $.ajax({
-            type: 'GET',
-            dataType: 'json',
+                type: 'GET',
+                dataType: 'jsonp',
+                crossDomain: true,
+                url: gravatarUrl,
+                complete: function() {
+                    console.log("Ajax call complete")
+                },
+                success: function(data) {
+                    console.log(data)
+                    $(".gravatar").append("<img src=" + data.entry[0].photos[0].value + "><br>");
+                    $(".gravatar").append(data.entry[0].displayName + "<br>");
+                    $(".gravatar").append(data.entry[0].currentLocation + "<br>");
+                    $(".gravatar").append(data.entry[0].aboutMe);
+                },
+                error: function(xhr, status) {
+                    console.log("Error : ", xhr, " ", status);
+                }
+          /*  type: 'GET',
+            url: gravatarUrl, //this is just requesting the url, not an API. Some firewalls block this.
             crossDomain: true,
-            jsonp: 'json_callback',
-            url: gravatarUrl,
-            complete: function() {
+            dataType: 'text',
+            complete: function () {
                 console.log("Ajax call complete")
             },
-            success: function(data) {
+            success: function (data) {
                 console.log(data)
             },
-            error: function(xhr, status) {
+            error: function (xhr, status) {
                 console.log("Error : ", xhr, " ", status);
-            }
+            }*/
         });
     });
 

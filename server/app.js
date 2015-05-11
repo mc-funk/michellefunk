@@ -14,7 +14,7 @@ app.get('/grav', function(request, response) {
 
 app.get('/*', function(request, response) {
     var file = request.params[0] || 'views/index.html';
-
+    response.header('Access-Control-Allow-Origin', "*");
     response.sendFile(path.join(__dirname, './public', file));
 });
 
