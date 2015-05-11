@@ -10,7 +10,7 @@ $(document).ready(function() {
                 },
                 success: function(data) {
                     console.log(data)
-                    $(".gravatar").append("<img src=" + data.entry[0].photos[0].value + "><br>");
+                    $(".gravatar").append("<img src='" + data.entry[0].photos[0].value + "?s=150&d=identicon&r=G'><br>");
                     $(".gravatar").append(data.entry[0].displayName + "<br>");
                     $(".gravatar").append(data.entry[0].currentLocation + "<br>");
                     $(".gravatar").append(data.entry[0].aboutMe);
