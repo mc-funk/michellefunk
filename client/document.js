@@ -9,11 +9,13 @@ $(document).ready(function() {
                     console.log("Ajax call complete")
                 },
                 success: function(data) {
-                    console.log(data)
-                    $(".gravatar").append("<img src='" + data.entry[0].photos[0].value + "?s=150&d=identicon&r=G'><br>");
-                    $(".gravatar").append(data.entry[0].displayName + "<br>");
-                    $(".gravatar").append(data.entry[0].currentLocation + "<br>");
-                    $(".gravatar").append(data.entry[0].aboutMe);
+                    var profile = data.entry[0];
+                    console.log(data);
+                    $(".gravatar").append("<a href='" + profile.profileUrl + "'> " +
+                        "<img src='" + profile.photos[0].value + "?s=150&d=identicon&r=G'><br></a>");
+                    $(".gravatar").append(profile.displayName + "<br>");
+                    $(".gravatar").append(profile.currentLocation + "<br>");
+                    $(".gravatar").append(profile.aboutMe);
                 },
                 error: function(xhr, status) {
                     console.log("Error : ", xhr, " ", status);
