@@ -14,7 +14,6 @@ module.exports = function(grunt) {
             //Define source and destination for uglified code
             build: {
                 files : {
-                    'server/public/assets/scripts/app.min.js' : 'client/app.js',
                     'server/public/assets/scripts/document.min.js' : 'client/document.js'
                 }
             }

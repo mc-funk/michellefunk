@@ -12,27 +12,14 @@ $(document).ready(function() {
                     var profile = data.entry[0];
                     console.log(data);
                     $(".gravatar").append("<a href='" + profile.profileUrl + "'> " +
-                        "<img src='" + profile.photos[0].value + "?s=150&d=identicon&r=G'><br></a>");
-                    $(".gravatar").append(profile.displayName + "<br>");
-                    $(".gravatar").append(profile.currentLocation + "<br>");
-                    $(".gravatar").append(profile.aboutMe);
+                        "<img class='img-bordered img-responsive' src='" + profile.photos[0].value + "?s=150&d=identicon&r=G'></a>");
+                    $(".gravatar").append("<h4 class='white'>" + profile.displayName + "<br></h5>");
+                    $(".gravatar").append("<h5><em>" + profile.currentLocation + "<br></em></h5>");
+                    $(".gravatar").append("<h5>" + profile.aboutMe + "</h5>");
                 },
                 error: function(xhr, status) {
                     console.log("Error : ", xhr, " ", status);
                 }
-          /*  type: 'GET',
-            url: gravatarUrl, //this is just requesting the url, not an API. Some firewalls block this.
-            crossDomain: true,
-            dataType: 'text',
-            complete: function () {
-                console.log("Ajax call complete")
-            },
-            success: function (data) {
-                console.log(data)
-            },
-            error: function (xhr, status) {
-                console.log("Error : ", xhr, " ", status);
-            }*/
         });
     });
 
@@ -62,12 +49,19 @@ $(document).ready(function() {
         });
     });
 
+    $("#community").on("click", function() {
+        $.get("/assets/scripts/community.html", function(data){
+            $(".textArea").html(data);
+            setHeight();
+        });
+    });
+
 
 });
 
 function setHeight(){
     var eHeight = $(".textArea").innerHeight();
-    $(".sidebar").outerHeight(eHeight);
+    $(".sidebar, .sidebar2").outerHeight(eHeight);
 }
 
 function displayGravatar() {
