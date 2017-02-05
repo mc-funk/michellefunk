@@ -3,6 +3,10 @@ body {
 	font-size: 16px;
 }
 
+.container {
+	max-width: 950px;
+}
+
 a {
 	color: #fda703;
 }
@@ -36,6 +40,14 @@ h5 {
 
 .gold {
 	color: #fda703;
+}
+
+.blue {
+	color: #6aa9d4;
+}
+
+.softBlack {
+	color: #555555;
 }
 
 p {
@@ -95,16 +107,13 @@ p {
 	width: 120px;
 }
 
-.blue {
-	color: #6aa9d4;
-}
-
 .socialBtn {
 	text-align: center;
 }
 
 .gravatar {
 	margin-left: 10px;
+	margin-top: 25px;
 }
 
 .sidebar2 {
