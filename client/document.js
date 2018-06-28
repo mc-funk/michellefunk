@@ -1,3 +1,10 @@
+/* Hello developer friend! 
+ * You may be shocked to learn that this is somewhat of a legacy codebase, based
+ * on a solo project from my bootcamp days (2015).
+ * There was a time I was tempted to pull this code into an edgier framework 
+ * rather than using jQuery, and certainly it lacks many modern amenities, 
+ * but for my simple purposes here, despite being fairly hackish, it holds up all right.
+*/ 
 $(document).ready(function() {
   $.get("/grav", {name:'michelle@michellefunk.com'}, function(gravatarUrl) {
     $.ajax({
